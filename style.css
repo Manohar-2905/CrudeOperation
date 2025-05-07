@@ -1,0 +1,37 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c2658c8;
+    align-items: center;
+}
+*{
+    color: white;
+}
+.delete,.add{
+    font-weight: bold;
+}
+.searchn{
+    padding: 0;
+    margin: 0;
+}
+.search input{
+    border: none;
+}
+.menut{
+    margin-top: 2rem;
+}
+.footer{
+    justify-content: end;
+}
+.footer button{
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.active{
+    background-color: rgb(17, 232, 192) ;
+}
+.pgMain{
+    background-color: #1c2658c8;
+    border: navy;
+}
