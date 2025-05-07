@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Crud Operation</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assest/crud logo.png">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="bg-dark text-white">
+    <div class="container">
+        <h1 class="text-primary tw-bold p-4 text-center">CRUD OPERATION</h1>
+        <div class="row">
+
+            <div class="col-md-12 p-4 bg-dark shadow-lg">
+                <div class="head p-3">
+                    <div><h1 class="text-white">Empolyee info</h1></div>
+                    <div> 
+                        <button class="btn btn-light searchn">
+                            <input type="search" placeholder="search" class="search form-control bg-dark text-white">
+                        </button>
+                        <button class="btn btn-danger delete delete-Allbtn">
+                            <i class="fa-solid fa-minus "></i>Delete All</button>
+                        <button class="btn add-btn btn-success add" data-bs-toggle="modal" data-bs-target="#mymodal">
+                            <i class="fa-solid fa-plus"></i>Add New user</button>
+                    </div>
+                </div>
+                <div class="row mt-5 menut">
+                    <div class="col-mid-12 table-responsive">
+                        <table class="table mb-3 table-striped text-center">
+                            <thead>
+                               <tr>
+                                   <th>Sr</th>
+                                   <th>Profile</th>
+                                   <th>Name</th>
+                                   <th>Email</th>
+                                   <th>DOB </th>
+                                   <th>Mobile no.</th>
+                                   <th>Action</th>
+                               </tr>
+                            </thead>
+                            <tbody class="reg-list">
+                               
+                            </tbody>
+                        
+                       </table>
+                       <div class="btn btn-light btn-group float-end pgMain">
+                            <button class="btn btn-danger prev-btn">
+                                <i class="fa-solid fa-caret-left"></i>
+                            </button>
+
+                            <div class="btn-group pagination-box ">
+                            </div>
+                            
+                            <button class="btn btn-danger next-btn" >
+                                <i class="fa-solid fa-caret-right"></i>
+                        </button>
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" id="mymodal">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h4 class="fw-bold text-white">New user details</h4>
+                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body bg-dark">
+                        <form class="user-register">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-white bg-dark">Name</span>
+                                <input type="text"  required class="form-control inputs bg-dark text-white" >
+                            </div> 
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-white bg-dark">Email</span>
+                                <input type="email"  required class="form-control inputs bg-dark text-white" >
+                            </div> 
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-white bg-dark">DOB</span>
+                                <input type="date"  required class="form-control inputs bg-dark text-white" id="date" >
+                            </div> 
+                            <div class="input-group mb-3">
+                                <span class="input-group-text text-white bg-dark">Mobile no.</span>
+                                <input type="number"  required class="form-control inputs bg-dark text-white" maxlength="10" >
+                            </div> 
+                            <div class="input-group mb-3">
+                                <span class="input-group-text bg-dark text-white">Password</span>
+                                <input type="password" required class="form-control inputs bg-dark text-white" >
+                            </div> 
+                            <div class="input-group mb-3 ">
+                                <input type="file" class="form-control inputs bg-dark text-white">
+                            </div> 
+                            <div class="input-group mb-3 footer ">
+                               <button disabled class="btn btn-danger m-2" type="button">
+                                <i class="fa-solid fa-pen-to-square"></i>update
+                               </button>
+                               <button class="btn btn-primary m-2" type="submit">
+                                <i class="fa-solid fa-user"></i>Register
+                               </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
